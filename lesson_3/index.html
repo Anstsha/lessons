@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Lesson 3</title>
+</head>
+<body>
+	<header class="header">
+		<p>The navigation through the article</p>
+		<ul class="header__menu">
+			<li><a href="#intoduction" class="header__link">Introduction</a></li>
+			<li><a href="#p1" class="header__link">Design for Color Contrast</a></li>
+			<li><a href="#p2" class="header__link">Provide Visual Cues in Addition to Color</a></li>
+			<li><a href="#p3" class="header__link">Identify Focus State</a></li>
+			<li><a href="#p4" class="header__link">Use Robust Alternative Text for Images</a></li>
+			<li><a href="#p5" class="header__link">Test with Real Users</a></li>
+			<li><a href="#p6" class="header__link">Conclusion</a></li>
+		</ul>
+	</header>
+	<main class="page">
+		<div class="page__top">
+			<h1 class="top__title main-title">5 Visual Treatments that Improve Accessibility</h1>
+			<p class="top__subtitle"><span>Summary:</span> To design accessible visuals, account for color contrast, 
+				don’t rely on color alone, make interactive elements easy to identify, provide useful alternative text for images, 
+				and test your visuals with real users.
+			</p>
+			<p class="top__author">
+				By <a href="https://www.nngroup.com/articles/author/kelley-gordon/">Kelley Gordon</a> on October 30, 2022
+			</p>
+		</div>
+		<div class="page__introduction" id="intoduction">
+			<a href="https://www.cdc.gov/ncbddd/disabilityandhealth/infographic-disability-impacts-all.html#:~:text=61%20million%20adults%20in%20the,is%20highest%20in%20the%20South">
+				According to the CDC, 61 million adults in the United States live with a disability.
+			</a> 
+			Given the number of people who have a disability and the rise of Americans with Disabilities (ADA) 
+			website-related lawsuits over the past years, it is imperative that we design for these individuals. 
+			After all, accessible design drives better usability. Accessibility standards such as the 
+			<a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Content Accessibility Guidelines (WCAG) </a>
+			are a good starting point for those aiming to improve the accessibility of their design. 
+			Additionally, platform-specific UI recommendations such as 
+			<a href="https://developer.apple.com/design/human-interface-guidelines/foundations/accessibility">
+				Apple’s Human-Interface Guidelines
+			</a> 
+			and <a href="https://m2.material.io/design/usability/accessibility.html#understanding-accessibility">Google’s Material Design</a> 
+			also include accessibility guidelines for designers working within those ecosystems. 
+			This article presents 5 general guidelines that can be used to improve the accessibility of your visuals:
+		</div>
+		<div class="page__color" id="p1">
+			<h2 class="color__title">1. Design for Color Contrast</h2>
+			<p>
+				People with vision impairments can have trouble reading text on low-contrast backgrounds. 
+				A <span>higher contrast ratio between text and its background</span> helps users with a low vision to read without 
+				contrast-enhancing assistive technology. This color contrast can also help users with normal vision 
+				to have a comfortable reading experience. According to the 
+				<a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html">WCAG</a>, 
+				the color-contrast ratio between text and its background should be at least 4.5:1. For text that is at least 18pt or 14pt bold, 
+				the ratio is a bit more generous at 3:1.
+			</p>
+			<p>
+				There are several tools to check color contrast. I like using 
+				<a href="https://accessible-colors.com/">accessible-colors.com</a> 
+				because it provides decent alternative color suggestions if your contrast ratio is not compliant. 
+				To check for the color-contrast ratio, you will need to input the text size, the text weight, 
+				and the hexadecimal codes for text color and background color.
+			</p>
+			<div class="color__image">
+				<img src="img/01.jpg" alt="Color-contrast tool">
+			</div>
+		</div>
+		<div class="page__visual" id="p2">
+			<h2 class="visual__title">2. Provide Visual Cues in Addition to Color</h2>
+			<p>
+				Individuals who have color blindness or low visual acuity may not be able to distinguish between elements 
+				differentiated by color alone. It is thus important to <span>use additional cues (such as strokes, patterns)</span> 
+				to communicate important information.
+			</p>
+			<div class="visual__image">
+				<img src="img/02.jpg" alt="Example of signaling an error in the site">
+			</div>
+			<p>
+				If you’re not sure if you need an additional design element in addition to color to get a point across, 
+				try the grayscale trick. Turn your design into grayscale and see if you can correctly understand the design.
+			</p>
+			<div class="visual__image">
+				<img src="img/03.jpg" alt="A bad example of signaling an error in the site">
+			</div>
+		</div>
+		<div class="page__focus" id="p3">
+			<h2 class="focus__title">3. Identify Focus State</h2>
+			<p>
+				Not only is it good usability practice to make interactive elements easily identifiable, 
+				but it is also beneficial for individuals who use the keyboard to navigate the web. 
+				A focus indicator, which is, by default, a blue outline around an element, 
+				helps people know which active element has the keyboard focus.
+			</p>
+			<p>
+				Focus states are easily customizable to fit your visual-design needs or brand standards. 
+				Links, form fields, widgets, buttons, and menu items should be focusable and their focus state should be clearly indicated.  
+			</p>
+			<p>
+				I recommend using a visually obvious stroke (e.g., a thick-weight line around the in-focus element) 
+				to clearly identify a focus state for two reasons:
+			</p>
+			<ul>
+				<li>This indicator is the default signal and many users expect it.</li>
+				<li>
+					Color change alone is not enough to distinguish between different states (see guideline #3 above), 
+					as it may not be perceived by some people with vision impairments.
+				</li>
+			</ul>
+			<div class="focus__image">
+				<img src="img/04.jpg" alt="Example of navigation in the site">
+			</div>
+		</div>
+		<div class="page__alternitives" id="p4">
+			<h2 class="alternitives__title">4. Use Robust Alternative Text for Images</h2>
+			<p>
+				Some users may use screen readers to interact and use a website. 
+				Alterative text (or ALT text) should be used to describe images and other graphic elements 
+				so that people who cannot see them can still get an idea of what is represented. 
+				A few guidelines to keep in mind when writing ALT text:
+			</p>
+			<ul>
+				<li>Keep ALT text succinct.</li>
+				<li>
+					The <span>ALT text should not replicate the caption</span> of the image (since both will be read by the screen reader).
+				</li>
+				<li>
+					ALT text should not be used for purely decorative images. If an image has no ALT text, the screen reader will jump over it, 
+					thus lessening the working-memory load for users.
+				</li>
+			</ul>
+			<p>If you’re having trouble coming up with something valuable to include in your ALT text, reach out to a content designer.</p>
+			<div class="alternitives__image">
+				<img src="img/05.jpg" alt="Using ALT text">
+			</div>
+		</div>
+		<div class="page__test" id="p5">
+			<h2 class="test__title">5. Test with Real Users</h2>
+			<p>Make accessibility part of your research. Here are some tips to test your designs:</p>
+			<ul>
+				<li>
+					<span>Get familiar with common assistive tools.</span> Understand how tools like screen readers, screen magnifiers, 
+					or Braille devices work and how to support them with your design.
+				</li>
+				<li>
+					<span>Try it yourself. Use the keyboard to navigate through your designs or turn on a screen reader.</span> 
+					What did you miss or not account for? Is there anything confusing about the experience? 
+					Address these issues before testing your design with real users.
+				</li>
+				<li>
+					<span>Test your design with real users.</span> 
+					<a href="https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/">You need only 5 users</a> 
+					to get valuable feedback. Fix the issues and test again as needed.
+				</li>
+				<li>
+					<span>Consider recruiting users with a mix of accessibility needs —</span> for example, 
+					people with low vision and people with motor difficulty.
+				</li>
+			</ul>
+		</div>
+		<div class="page__conclusion" id="p6">
+			<h2 class="conclusion__title">Conclusion</h2>
+			<p>How do your visuals hold up against these guidelines? If you haven’t designed with accessibility in mind, 
+				add it as a theme in your UX roadmap. Review your designs for accessibility and test them with real users with accessibility needs. 
+				It’s easier to design with accessibility in mind as you go, so there is less rework. Don’t sacrifice usability for aesthetics.
+			</p>
+			<p>Learn more in our <a href="https://www.nngroup.com/courses/visual-design/">full-day course on Visual Design Fundamentals.</a></p>
+		</div>
+	</main>
+	<footer class="footer">
+		<p>You can find this article <a href="https://www.nngroup.com/articles/visual-treatments-accessibility/">here</a></p>
+	</footer>
+</body>
+</html>

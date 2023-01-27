@@ -1,0 +1,41 @@
+@import url("reset.css");
+* {
+	color: black;
+}
+[class*="__title"] {
+	color: hotpink;
+}
+[class*="__title"].main-title {
+	color:yellow;
+}
+#intoduction{
+	color: red;
+}
+div li{
+	color: blueviolet;
+}
+div > span{
+	color: green
+} 
+.header a{
+	color: darkmagenta;
+}
+.page__top ~ div{
+	color: aquamarine;
+}
+.top__title ~ p{
+	color: brown;
+}
+.page__introduction > a{
+	color: aquamarine;
+}
+.visual__image + p{
+	color: chartreuse;
+}
+.footer a{
+	color: coral;
+}
+.alternitives__title,
+.conclusion__title {
+	color: olive;
+}
