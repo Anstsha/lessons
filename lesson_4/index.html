@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Lesson 4</title>
+</head>
+
+<body>
+	<header class="header">
+		<ul class="header__menu">
+			<li><a href="#p-0" class="menu__link">Let Users Control Font Size</a></li>
+			<li><a href="#p-1" class="menu__link">The State of Font Control</a></li>
+			<li><a href="#p-2" class="menu__link">Simplifying Browser Font Control</a></li>
+			<li><a href="#p-3" class="menu__link">Improving Future Browsers</a></li>
+			<li><a href="#p-4" class="menu__link">Readability Guidelines for Websites</a></li>
+		</ul>
+	</header>
+	<main class="page">
+		<div class="page__intro">
+			<h1 class="intro__title main-title" id="p-0">Let Users Control Font Size</h1>
+			<div class="intro__text">
+				<span>Summary:</span> Tiny text tyrannizes users by dramatically reducing task throughput. IE4 had a great
+				UI that let users easily change font sizes; let's get this design back in the next generation of browsers.
+			</div>
+			<div class="intro__by">
+				By <a href="https://www.nngroup.com/articles/author/jakob-nielsen/" target="_blank">Jakob Nielsen</a> on August 18, 2002
+			</div>
+		</div>
+		<hr>
+		<div class="page__state">
+			<h2 class="state__title" id="p-1">The State of Font Control</h2>
+			<p>
+				I'm hereby launching a campaign to get Microsoft to <span class="bold">make user preferences override</span> any fixed
+				font size specification in Web designs.
+			</p>
+			<p>
+				It may be okay for the browser to initially render the page with the designer's text size, but users should
+				be able to easily enlarge text, no matter what the style sheet says. After all, it's my screen, my computer,
+				and my software, and they should do what I say.
+			</p>
+			<p>
+				Granted, some web browsers have a geeky feature that lets users specify their own style sheets. Fine for
+				experts, but 99% of users simply want to make text bigger if it's too small to read. The Mac-only iCab
+				browser gives users this simple control; let's make Internet Explorer equally friendly to users' needs.
+			</p>
+			<p>So, why is so much website text so hard to read in the first place? Two theories:</p>
+			<ul class="state__list">
+				<li>
+					Most web designers are young, and so have perfect vision. Tiny text doesn't bother them as much as it
+					bothers people on the other side of 40. Designers also tend to own expensive, high-quality monitors that
+					are easier on the eyes.
+				</li>
+				<li>
+					While creating a website, designers don't actually read the information on the pages. They simply glance
+					at the text to make sure it looks great. In fact, many designs are approved with "lorem ipsum" standing
+					in the place of real copy. When you don't have to read the words, it doesn't matter that the characters
+					are small.
+				</li>
+			</ul>
+			<p>
+				Because so many sites have made bad decisions regarding font size, users commonly need to change it. Early
+				IE versions supported this need, offering users two standard toolbar buttons: one that made text bigger, and
+				the other that made it smaller. That's the way things should be.
+			</p>
+			<p class="state__conclusion">Mr. Gates, please give us back the good design you shipped in IE4 for the Mac.</p>
+		</div>
+		<div class="page__simplify">
+			<h2 class="simplify__title" id="p-2">Simplifying Browser Font Control</h2>
+			<p>
+				Unfortunately, recent versions of IE have eliminated IE4's good design, replacing it with an approach that
+				has two serious usability problems:
+			</p>
+			<ul class="simplify__list">
+				<li>
+					<span class="bold">The text size button is no longer visible by default.</span> Only the minuscule percentage of users
+					who customize their toolbars will get this highly useful button. Most users see instead the default toolbar,
+					which is polluted with buttons that have much less utility. Because the feature is hidden, few users
+					realize that their browser can change text size.
+				</li>
+				<li>
+					<span class="bold">Separate buttons no longer exist</span> for text-bigger and text-smaller. If users can find it at
+					all, they'll get a single button to control both directions of text change.
+				</li>
+			</ul>
+			<p>
+				For those few experienced users who do prevail and restore the missing button to their customized toolbar,
+				actually changing the text size in IE6 requires several steps:
+			</p>
+			<ol class="simplify__list">
+				<li>
+					Acquire the button by moving the mouse pointer over it. Since buttons are reasonably big in IE, this step
+					is fairly quick according to 
+					<a href="https://www.asktog.com/columns/022DesignedToGiveFitts.html" target="_blank">Fitts's Law.</a>
+				</li>
+				<li>Press down the mouse button.</li>
+				<li>
+					This causes a pull-down menu to appear, with five possible font sizes. Scan this menu, making a mental
+					note of which font size is currently selected.
+				</li>
+				<li>
+					Mentally compute which new font size you want. This is typically one size bigger (or smaller) than the
+					current selection.
+				</li>
+				<li>
+					While you continue to press the mouse button, move the pointer down the menu until it points to the
+					desired new font size.
+				</li>
+				<li>Let go of the mouse button.</li>
+			</ol>
+			<p>
+				Compare this awkward, six-step process with the interaction technique required by a design that includes
+				separate buttons for "make text larger" and "make text smaller":
+			</p>
+			<ol class="simplify__list">
+				<li>Click the desired button.</li>
+			</ol>
+			<p>
+				Of course, I am cheating a little: You would still have the initial step of deciding whether you want the
+				text larger or smaller, thus determining which button you'd click. Still, since the entire change-font-size
+				procedure is triggered by your annoyance at trying to read unpleasantly sized text, you already know that
+				you want bigger (or smaller) text by the time you decide to change the size. (The average user doesn't have
+				a mental model of a single "change size" command that is parameterized with the desired direction of change;
+				the user's model includes two actions: "bigger" and "smaller." How the code is implemented is irrelevant for
+				the user illusion which should be designed to match the users' mental model.)
+			</p>
+			<p>
+				The two-button approach frees users from the cognitive overhead of calculating how big they want the text to
+				be. <span class="italic">Just make it bigger</span>. Users don't want to specify exactly 
+				<span class="italic">how big</span>. They can easily keep clicking the
+				"bigger" button if the initial click doesn't make the text big enough.
+			</p>
+			<p>
+				Usability is enhanced by single action buttons that move along a uni-dimensional axis in simple steps, as
+				long as each step's result is immediately clear after each click. That's also why the Back button is so
+				precious to users, and why it's used much more frequently than history list navigation.
+			</p>
+		</div>
+		<div class="page_improve">
+			<h2 class="improve__title" id="p-3">Improving Future Browsers </h2>
+			<p>
+				Reverting to IE4's design for the Mac would be a great step forward for font size usability. Still, we can
+				do better.
+			</p>
+			<p>
+				Instead of having users manually change the text size every time they come across a user-hostile design,
+				let's take advantage of the Internet and track font size preferences: Every time your browser loaded a page
+				from a new website, it would first check a database for information about your predicted font size
+				preference:
+			</p>
+			<ul class="improve__list">
+				<li>
+					If it's a site you had visited before, a database on your local machine would keep a record of whether
+					you had clicked the text-larger or text-smaller buttons during your previous visits. If so, it would
+					automatically adjust the text accordingly.
+				</li>
+				<li>
+					If this were your first visit to the site, your browser would contact a central database for information
+					about the actions of users similar to you who'd visited the site. It would then apply these users'
+					average adjustment to the first page you see from the site. If you make any additional changes, your
+					local database would note a revised preference and log the modification with the central database.
+				</li>
+			</ul>
+			<p>
+				To expedite response time, your browser might pre-fetch the preference settings for all websites that the
+				current page linked to before you even clicked a link.
+			</p>
+			<p>
+				The central database itself would be a straightforward case of collaborative filtering, since it would be
+				easy to find other users with the same text-size preferences. For any given web page, most users would
+				either leave it alone or request text that's one or two sizes larger or smaller. Because a total of five
+				options would account for the vast majority of users, font size preferences would be much easier to model
+				than, say, taste in books or films.
+			</p>
+			<p>
+				Auto-adjusting font sizes based on collaborative filtering is a simple example of the benefits that could
+				accrue from more <span class="bold">network-aware browsers</span>. It would also be possible to auto-repair
+				many broken links, auto-remove annoying ads or pop-ups, and make many other improvements to individual users' experience based
+				on feedback from prior site visitors.
+			</p>
+			<p>
+				We must stop thinking of browsers as trivial pieces of free software that aim at nothing more than rendering
+				web page pictures on the screen. We need user-supportive environments that facilitate navigation and protect
+				users from the excesses of bad websites.
+			</p>
+		</div>
+		<div class="page__readability">
+			<h2 class="readability__title" id="p-4">Readability Guidelines for Websites </h2>
+			<p>
+				We can't wait for Microsoft to ship a good browser, though that has to be the ultimate solution to the font
+				size problem. For now, websites can increase readability by following these guidelines:
+			</p>
+			<ul class="readability__list">
+				<li>
+					<span class="bold">Do not use absolute font sizes </span>in your style sheets. Code font sizes in
+					relative terms, typically using percentages such as 120% for big text and 90% for small text.
+				</li>
+				<li>
+					<span class="bold">Make your default font size reasonably big </span>(at least 10 point) so that very few
+					users have to resort to manual overrides.
+				</li>
+				<li>
+					<span>If your site targets 
+						<a href="https://www.nngroup.com/articles/usability-for-senior-citizens/" target="_blank">senior citizens</a>
+					</span>, use bigger default font sizes (at least 12 point).
+				</li>
+				<li>
+					<span class="bold">If possible, avoid text that's embedded within a graphic</span>, since style sheets
+					and font size buttons don't have any effect on graphics. If you must use pictures of text, make sure the font size is especially
+					large (at least 12 point) and that you use high-contrast colors.
+				</li>
+				<li>
+					<span class="bold">Consider adding a button that loads an alternate style sheet</span> with really big
+					font sizes if most of yoursite's visitors are senior citizens or
+					<a href="https://www.nngroup.com/topic/accessibility/" target="_blank">low-vision</a>
+					users. Few users know how to find or use the built-in font size feature in current browsers, and adding such a button within your pages will help users easily
+					increase text size. However, because every extra feature takes away from the rest of the page, I don't
+					recommend such a button for mainstream websites.
+				</li>
+				<li>
+					<span class="bold">Maximize the color contrast</span> between the text and the background (and do not use
+					busy or watermarked background patterns). Despite the fact that low-contrast text further reduces readability, the Web is
+					plagued by gray text these days.
+				</li>
+			</ul>
+		</div>
+	</main>
+	<footer class="footer">
+		You can find this article <a href="https://www.nngroup.com/articles/let-users-control-font-size/">here</a>
+	</footer>
+</body>
+
+</html>
