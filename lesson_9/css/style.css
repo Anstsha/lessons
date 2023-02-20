@@ -1,0 +1,134 @@
+@import url("reset.css");
+@import url(https://fonts.googleapis.com/css?family=Poppins:regular,600&display=swap);
+
+.page {
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+	background-color: rgb(187, 187, 187);
+	color: rgb(59, 59, 59);
+	padding: 50px 0;
+}
+.page__container {
+	max-width: 1300px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+img{
+	max-width: 100%;
+}
+.page__container > *{
+	margin-bottom: 100px;
+}
+.page__title {
+	font-weight: 600;
+	font-size: 24px;
+	margin-bottom: 45px;
+}
+.title {
+	font-weight: 600;
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+.subtitle {
+	line-height: 1.35;
+	max-width: 650px;
+	margin-bottom: 20px;
+}
+.gallery-icons{
+	font-size: 0;
+}
+.gallery-icons img:not(:last-child){
+	margin-right: 35px;
+}
+.gallery-icons > :not(:last-child){
+	margin-bottom: 50px;
+}
+.gallery-icons img{
+	vertical-align: middle;
+}
+.page__design-elements {
+}
+
+.design-elements__gallery {
+	font-size: 0;
+}
+.gallery__item {
+	display: inline-block;
+	height: 150px;
+	width: 150px;
+	vertical-align: middle;
+}
+.gallery__item:not(:last-child) {
+	margin-right: 25px;
+}
+.item-01 {
+	background: url(../img/design-elements/design-blue-dots.svg) center no-repeat;
+}
+.item-02 {
+	background: url(../img/design-elements/design-blue-segment.svg) center no-repeat;
+}
+.item-03 {
+	background: url(../img/design-elements/design-double-segments.svg) center no-repeat;
+}
+.item-04 {
+	background: rgb(253, 222, 227) url(../img/design-elements/design-green-dots.svg) center no-repeat;
+}
+.item-05 {
+	background: url(../img/design-elements/design-green-segment.svg) center no-repeat;
+}
+.item-06 {
+	background: url(../img/design-elements/design-white-dots.svg) center no-repeat;
+}
+.item-07 {
+	background: url(../img/design-elements/design-small-dots.svg) center no-repeat;
+}
+.item-08 {
+	background: #3056D3 url(../img/design-elements/design-spot-01.svg) center no-repeat;
+	width: 250px;
+	height: 250px;
+}
+.item-09 {
+	background: #3056D3 url(../img/design-elements/design-spot-02.svg) center no-repeat;
+	width: 250px;
+	height: 250px;
+}
+.item-10 {
+	background: url(../img/design-elements/design-strips-bg.svg) center no-repeat;
+	width: 200px;
+	height: 200px;
+}
+.gallery-content  > :not(:last-child) {
+	margin-bottom: 45px;
+}
+.gallery-content{
+	font-size: 0;
+	text-align: center;
+}
+.gallery-content__blog img{
+	border-radius: 5px;
+}
+.gallery-content__blog img:not(:last-child){
+	margin-right: 30px;
+}
+.gallery-content__feedback img{
+	border-radius: 50%;
+}
+.gallery-content__portfolio img{
+	border-radius: 10px;
+}
+.gallery-content__team img{
+	border-radius: 8px;
+}
+.gallery-content__team img:not(:last-child){
+	margin-right: 30px;
+}
+.gallery-content__why img{
+	border-radius: 15px;
+	vertical-align: middle;
+}
+.gallery-content__why img:not(:last-child){
+	margin-right: 30px;
+}
+.page__container >:last-child{
+	margin-bottom: 0;
+}
